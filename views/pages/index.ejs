@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<%- include('../partials/head') %>
+
+<body class="container" >    
+
+    <%- include('../partials/header') %>
+
+    <main>
+        <div class="jumbotron.fluid container">
+            <h1 class="display-4">Node with EJS</h1>
+            <p class="lead">learning to work with EJS files.</p>
+
+            <hr class="my-4">
+
+            <p> <%= subtitle %>  </p>
+        </div>
+
+        <ul>
+
+            <% qualities.forEach( (quality) => { %>
+                <li>
+                    <strong> <%= quality.title %></strong><%= quality.message %>                    
+                </li>
+           <% }); %>
+            
+        </ul>
+
+    </main>     
+
+    <%- include('../partials/footer') %>
+    
+</body>
+</html>
